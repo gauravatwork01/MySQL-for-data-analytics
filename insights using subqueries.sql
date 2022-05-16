@@ -1,3 +1,12 @@
+/*Extract the information about all those employees who are not managers*/
+
+select * 
+from employees where emp_no not in (select emp_no from dept_manager);
+
+
+
+
+
 /*Extract the information about all department managers who were hired between the 1st of January 1990 and the 1st of January 1995.*/
 
 
