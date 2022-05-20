@@ -46,4 +46,19 @@ left join departments as d on d.dept_no=de.dept_no
 ) as t1 where ranks=3;
 ```
 
+## Question 6 - Extract the information about employee hiring count between the year 1990 and 1995 for each department, and categorize the data with a threshold value of 700 into "low" and "high".
+
+```sh
+
+select de.dept_no,year(e.hire_date) as hire_yr,count(*) as tot_emp,
+case 
+ when  count(*) > 700 then "high"
+ when count(*) < 700 then "low"
+ end as hire_status
+from employees as e inner join dept_emp as de on de.emp_no=e.emp_no
+where year(e.hire_date)>=1990 and year(e.hire_date)<=1995
+group by de.dept_no,hire_yr
+order by de.dept_no,tot_emp asc
+; 
+```
 
