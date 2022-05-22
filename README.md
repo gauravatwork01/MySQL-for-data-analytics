@@ -9,4 +9,4 @@ related questions.
 
 ## Directions
 
-Please open MySQL_queries. 
+Please open MySQL_queries.md file. 
