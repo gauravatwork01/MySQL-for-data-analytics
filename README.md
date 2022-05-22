@@ -6,3 +6,7 @@ Data Analytics and Business Intelligence.
 
 Use MySQL for relevant data extraction, aggregations, and operations for Data Analytics and Business Intelligence answering various business 
 related questions.
+
+## Directions
+
+Please open MySQL_queries. 
